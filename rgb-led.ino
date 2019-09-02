@@ -1,10 +1,10 @@
 
-int redPin = 10;
-int greenPin = 9;
-int bluePin = 8;
+int redPin = 9;
+int greenPin = 10;
+int bluePin = 11;
 
 //uncomment this line if using a Common Anode LED
-#define COMMON_ANODE
+define COMMON_ANODE
 
 void setup() {
   pinMode(redPin, OUTPUT);
