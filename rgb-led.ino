@@ -1,33 +1,36 @@
-
 /*
-  Code by: www.munphurid.com
-  M. Hasir
+  Code by: 
+  M. Hashir & Wardah Arshad
 
-  This is a code that shows mixing of different colours using RGB led
-  Hardware:
+This is a code that shows mixing of Red, Green and Blue to make different colours using RGB led
+
+Hardware:
   - Arduino
   - RGB Led
+  - Resistor
 
+Hold the led in your hand such that the longest pin of RGB LED is second pin from left.
+Left most pin is pin 1 and right most pin is pin 4
 
   Connections:
-
-  Connect redpin of RGB to pin 3 of Arduino
-  Connect greenpin of RGB to pin 5 of Arduino
-  Connect bluepin of RGB to pin 6 of Arduino
+  Connect pin 1 (red) of RGB LED to pin 3 of Arduino
+  Connect pin 2 (VCC) of RGB LED to resistor and connect other end of resistor to pin 5V of Arduino
+  Connect pin 3 (green) of RGB LED to pin 5 of Arduino
+  Connect pin 4 (blue) of RGB LED to pin 6 of Arduino
 */
 
-int redPin = 3;                       //pin1 of RGB is connected to pin 3 of Arduino
-int greenPin = 5;                     //pin2 of RGB is connected to pin 5 of Arduino
-int bluePin = 6;                      //pin3 of RGB is connected to pin 6 of Arduino
+int redpin = 3;                       //pin1 of RGB is connected to pin 3 of Arduino
+int greenpin = 5;                     //pin2 of RGB is connected to pin 5 of Arduino
+int bluepin = 6;                      //pin3 of RGB is connected to pin 6 of Arduino
 
 //uncomment this line if using a Common Anode LED
 //#define COMMON_ANODE
 
 void setup()
 {
-  pinMode(redPin, OUTPUT);            //Donot edit this line
-  pinMode(greenPin, OUTPUT);          //Donot edit this line
-  pinMode(bluePin, OUTPUT);           //Donot edit this line
+  pinMode(redpin, OUTPUT);            //Donot edit this line
+  pinMode(greenpin, OUTPUT);          //Donot edit this line
+  pinMode(bluepin, OUTPUT);           //Donot edit this line
 }
 
 void loop()
@@ -53,7 +56,7 @@ void setColor(int red, int green, int blue)       //Donot edit this line
   green = 255 - green;                            //Donot edit this line
   blue = 255 - blue;                              //Donot edit this line
 #endif                                            //Donot edit this line
-  analogWrite(redPin, red);                       //Donot edit this line
-  analogWrite(greenPin, green);                   //Donot edit this line
-  analogWrite(bluePin, blue);                     //Donot edit this line
+  analogWrite(redpin, red);                       //Donot edit this line
+  analogWrite(greenpin, green);                   //Donot edit this line
+  analogWrite(bluepin, blue);                     //Donot edit this line
 }
