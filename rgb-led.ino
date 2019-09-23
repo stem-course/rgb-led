@@ -19,12 +19,12 @@ Left most pin is pin 1 and right most pin is pin 4
   Connect pin 4 (blue) of RGB LED to pin 6 of Arduino
 */
 
-int redpin = 3;                       //pin1 of RGB is connected to pin 3 of Arduino
-int greenpin = 5;                     //pin2 of RGB is connected to pin 5 of Arduino
-int bluepin = 6;                      //pin3 of RGB is connected to pin 6 of Arduino
+int redpin = 3;                       //pin 1 of RGB is connected to pin 3 of Arduino
+int greenpin = 5;                     //pin 3 of RGB is connected to pin 5 of Arduino
+int bluepin = 6;                      //pin 4 of RGB is connected to pin 6 of Arduino
 
-//uncomment this line if using a Common Anode LED
-//#define COMMON_ANODE
+//comment this line if not using a Common Anode LED
+#define COMMON_ANODE
 
 void setup()
 {
